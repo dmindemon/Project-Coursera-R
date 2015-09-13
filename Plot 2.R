@@ -1,0 +1,6 @@
+data = read.csv("data.csv")
+nrow(data)
+plot(data$Global_active_power, xaxt='n',type="l",ylab="Global Active Power (kilowatts)", xlab='')
+axis(1,c(0,2880/2,2880),c('Thu','Fri','Sat'))
+dev.copy(png,"plot2.png")
+dev.off()
